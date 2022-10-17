@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="assets/Favicon.png" />
+
+    <title>Responsive redesign</title>
+  </head>
+  <body style="margin-top: 60px">
+    <nav
+      id="navbar-example2"
+      class="navbar fixed-top navbar-light bg-light px-5"
+    >
+      <a class="navbar-brand" href="#">Responsive redesign</a>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading1">Intro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading2">Usability issues</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading3">Style guide</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading4">Lo-fi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scrollspyHeading5">Hi-fi</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container px-5 mx-5">
+      <div
+        data-bs-spy="scroll"
+        data-bs-target="#navbar-example2"
+        data-bs-offset="200"
+        class="scrollspy-example"
+        tabindex="0"
+      >
+        <h4 id="scrollspyHeading1">Introduction</h4>
+        <p>I chose the Brown MMA (club) website.</p>
+        <div class="row justify-content-md-center text-center px-5">
+          <div class="col">
+            <a href="https://brownmma.com/" target="_blank"
+              ><h6>Original</h6></a
+            >
+            <img
+              src="./assets/before.png"
+              class="img-fluid p-0 mb-4"
+              alt="website-about-paragraph"
+              style="max-width: 20vw"
+            />
+          </div>
+          <div class="col">
+            <a href=""><h6>Redesign</h6></a>
+            <img
+              src="./assets/after.png"
+              class="img-fluid p-0 mb-4"
+              alt="website-about-paragraph"
+              style="max-width: 20vw"
+            />
+          </div>
+        </div>
+
+        <h4 id="scrollspyHeading2">Usability issues</h4>
+        <p>
+          In general, the Brown MMA website does not present a digestible
+          hierarchy of information.
+          <b>The things that people need to know are hidden.</b> Elsewhere, key
+          space is wasted.
+        </p>
+
+        <p>
+          To identify the information which should be prioritized I created two
+          personas:
+        </p>
+        <div class="accordion my-4" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Nervous Nelson
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  Nervous Nelson has never attended a club meeting. He is trying
+                  to decide whether to go to a meeting. He is looking for basic
+                  information about the club. He also wants to know when and
+                  where meetings are if he decides to go.
+                </p>
+                He thinks:
+                <ul>
+                  <li>
+                    <em
+                      >I wonder if I can just show up to this club? What would I
+                      need to wear and bring?
+                    </em>
+                  </li>
+                  <li>
+                    <em>Is this club for beginners or is it tryout based? </em>
+                  </li>
+                  <li>
+                    <em>When and where would I go to attend a meeting? </em>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Avid August
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p>
+                  Avid August is a dedicated member of the club. He knows when
+                  regular practice times are and the vibe of each session. His
+                  goal using the website is to see when one time events are or
+                  to get the contact information of the club members.
+                </p>
+                He thinks:
+                <ul>
+                  <li>
+                    <em
+                      >When and where was that UFC watch party again? What day
+                      and time is the tournament?</em
+                    >
+                  </li>
+                  <li>
+                    <em>
+                      I need to contact the club leader because I am going to be
+                      late to the tournament
+                    </em>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <div class="lead p-4 mb-4">
+            <strong>
+              Using these personas, I found three main usability issues with the
+              current website:
+
+              <ol>
+                <li>Hidden date and time details</li>
+                <li>
+                  Lack of information for first time/prospective attendees
+                </li>
+                <li>Poor accessibility</li>
+              </ol>
+            </strong>
+          </div>
+        </div>
+
+        <h5>1. Hidden date and time details</h5>
+
+        <p>
+          Both experienced and new users rely on the website for basic time and
+          place information. However, the home screen does not fill this need.
+          In fact, about 90% of the screen is occupied by a generic Brown bear
+          picture.
+        </p>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/home-screen.png"
+            class="img-fluid p-4 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        Currently, date/time information is
+        <ol>
+          <li>Hidden in the middle of a paragraph</li>
+          <li>
+            Excludes the date and time for the kind of one time events that Avid
+            August (experienced member) is interested in.
+          </li>
+        </ol>
+        <p>This can be seen below, underlined in white.</p>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/date-time.png"
+            class="img-fluid p-4 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+
+        <h5 class="mt-4">
+          2. Lack of information for first time/prospective attendees
+        </h5>
+
+        <p>
+          The only place on the entire website that this information is
+          partially given is in a small blurb on the bottom of the home page.
+          However, the paragraph does not directly answer questions and leaves a
+          lot unknown. This information could be the difference between Nervous
+          Nelson checking out a meeting or not.
+        </p>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/blurb.png"
+            class="img-fluid p-4 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+
+        <h5 class="mt-4">3. Poor accessibility</h5>
+        <p>
+          The current website has a few accessibility issues. There are a few
+          contrast issues on the main homepage. WebAIM WAVE found these two:
+        </p>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/contrast.png"
+            class="img-fluid p-4 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        <p>
+          The second error is empty heading tags which are set to
+          <code>display: none</code>
+          in CSS. The tags seem to be from a past implementation of an image
+          carousel. However, they interfere with screen readers.
+        </p>
+        <h4 id="scrollspyHeading3">Style guide</h4>
+        <p>
+          The style guide is relatively simple. There is only one main
+          interactive component on the webpage (the accordion). There is also
+          the calendar, but it is embedded from google calendar.
+        </p>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/Style guide.png"
+            class="img-fluid p-4 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        <h4 id="scrollspyHeading4">Lo-fi</h4>
+        <h5>Desktop</h5>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/desk-low.png"
+            class="img-fluid p-0 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        <h5>Tablet</h5>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/tablet-low.png"
+            class="img-fluid p-0 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        <h5>Mobile</h5>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/mobile-low.png"
+            class="img-fluid p-0 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 55vw"
+          />
+        </div>
+        <h4 id="scrollspyHeading5">Hi-fi</h4>
+        <h5>Desktop</h5>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/desk-high.png"
+            class="img-fluid p-0 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        <h5>Tablet</h5>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/tablet-high.png"
+            class="img-fluid p-0 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+        <h5>Mobile</h5>
+        <div class="row justify-content-md-center">
+          <img
+            src="./assets/mobile-high.png"
+            class="img-fluid p-0 mb-4"
+            alt="website-about-paragraph"
+            style="max-width: 65vw"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
